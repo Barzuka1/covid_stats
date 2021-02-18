@@ -1,11 +1,12 @@
 import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import { red } from '@material-ui/core/colors';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark'
+    type: 'dark',
   }
 })
 

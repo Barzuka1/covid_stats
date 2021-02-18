@@ -13,7 +13,6 @@ const columns = [
 ]
   
 
-
 export class Table extends Component {
 
     state = {
