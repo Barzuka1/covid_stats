@@ -9,7 +9,7 @@ The api that is used is https://api.covid19api.com/summary
 This project is using google's Material-UI design library for react.js
 
 # Data Table
-The data table is using Material-UI's DataGrid Component
+The data table is using Material-UI's ```<DataGrid />``` Component
 and it's pretty pog
 
 # Scripts
