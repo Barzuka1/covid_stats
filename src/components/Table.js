@@ -22,19 +22,21 @@ export class Table extends Component {
     componentDidMount() {
         axios.get("https://api.covid19api.com/summary")
         .then(res => {
-            const { data } = res
+
             let info = []
             
-            data.Countries.forEach((country, iterator) => {
+            // Iterating Data
+            res.data.Countries.forEach((country, iterator) => {
+                // Adding needed data & Creating an ID
                 info.push({
                     id: iterator + 1,
-                    'Country': country.Country,
-                    'NewConfirmed': country.NewConfirmed,
-                    'TotalConfirmed': country.TotalConfirmed,
-                    'NewDeaths': country.NewDeaths,
-                    'TotalDeaths': country.TotalDeaths,
-                    'TotalRecovered': country.TotalRecovered,
-                })
+                    Country: country.Country,
+                    NewConfirmed: country.NewConfirmed,
+                    TotalConfirmed: country.TotalConfirmed,
+                    NewDeaths: country.NewDeaths,
+                    TotalDeaths: country.TotalDeaths,
+                    TotalRecovered: country.TotalRecovered,
+                })    
             })
 
             this.setState({ info })
