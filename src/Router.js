@@ -11,9 +11,8 @@ export class Router extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route path="/" component={Home} />
+                    <Route exact path="/" component={Home} />
                 </Switch>
-
                 { this.props.children }
             </BrowserRouter>
         )

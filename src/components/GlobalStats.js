@@ -12,9 +12,7 @@ export class GlobalStats extends Component {
     componentDidMount() {
         axios.get("https://api.covid19api.com/summary")
         .then(res => {
-            const { data } = res
-
-            this.setState({ data: data.Global })
+            this.setState({ data: res.data.Global })
         })
     }
 
